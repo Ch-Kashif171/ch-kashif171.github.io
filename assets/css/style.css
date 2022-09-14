@@ -333,7 +333,10 @@ main {
 
 .avatar-box {
   background: var(--bg-gradient-onyx);
-  border-radius: 20px;
+  border-radius: 50%;
+}
+.avatar-box > img{
+  border-radius: 50%;
 }
 
 .info-content .name {
@@ -1339,7 +1342,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .avatar-box { border-radius: 30px; }
 
-  .avatar-box img { width: 120px; }
+  .avatar-box img {
+    width: 120px;
+    margin-top: -40px;
+    border: 2px solid #fff;
+  }
 
   .info-content .name { margin-bottom: 15px; }
 
@@ -1835,7 +1842,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .sidebar-info { flex-direction: column; }
 
-  .avatar-box img { width: 150px; }
+  .avatar-box img { width: 160px; }
 
   .info-content .name {
     white-space: nowrap;
@@ -1879,4 +1886,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+.expertise li {
+  list-style-type: circle;
+  margin-left: 30px;
 }
