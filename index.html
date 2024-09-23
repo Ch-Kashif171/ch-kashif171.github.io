@@ -41,8 +41,11 @@
     <aside class="sidebar" data-sidebar>
 
       <div class="sidebar-info">
-        <a href="./assets/images/avatar.jpg" onclick="lightBoxPreview(true);" data-lightbox="roadtrip">
+        <a href="./assets/images/avatar.jpg" class="avatar-icon" onclick="lightBoxPreview(true);" data-lightbox="roadtrip">
           <figure class="avatar-box" style="border-radius: 50%;">
+            <div class="project-item-icon-box avatar-box-icon" style="top: 40px;">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
             <img src="./assets/images/avatar.jpg" alt="M. Kashif Sohail" width="100">
           </figure>
         </a>
@@ -1472,6 +1475,19 @@
   <script src="./assets/js/lightbox-plus-jquery.min.js"></script>
 
 <script>
+
+  $(document).ready( function () {
+    $(".avatar-icon").hover( function () {
+      $(".avatar-box-icon").css("opacity", '1')
+      $(".avatar-icon").css("opacity", '.6')
+    });
+
+    $(".avatar-icon").mouseleave( function () {
+      $(".avatar-box-icon").css("opacity", '0')
+      $(".avatar-icon").css("opacity", '1')
+    })
+
+  });
 
   lightbox.option({
     'resizeDuration': 200,
