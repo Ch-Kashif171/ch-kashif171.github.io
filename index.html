@@ -16,6 +16,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/lightbox.min.css">
 
   <!--
     - google font link
@@ -177,7 +178,10 @@
           </li>
 
           <li class="navbar-item">
-            <a href="cv.html" class="navbar-link" data-nav-link>CV</a>
+<!--            <a href="cv.html" class="navbar-link" data-nav-link>CV</a>-->
+            <a href="javascript:void(0);" onclick="previewCv();" class="navbar-link">CV</a>
+            <a href="javascript:void(0);" onclick="closeCv();" id="close-cv" class="navbar-link close-cv" style="float: right; display: none;">Close CV</a>
+            <embed style="display: none;" src="./cv.pdf" id="cv-view" width="1200px" height="5300px" />
           </li>
           <!--<li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
@@ -860,7 +864,43 @@
           <ul class="project-list">
 
             <li class="project-item  active" data-filter-item data-category="websites">
-              <a href="#">
+              <a href="./assets/images/17.png" data-lightbox="roadtrip">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/17.png" alt="Makkah Visitors" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Makkah Visitors</h3>
+
+                <p class="project-category">Websites</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="./assets/images/5.png" data-lightbox="roadtrip">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/5.png" alt="Key" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Mawqif</h3>
+
+                <p class="project-category">Application</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="websites">
+              <a href="./assets/images/6.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -878,7 +918,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="websites">
-              <a href="#">
+              <a href="./assets/images/8.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -896,7 +936,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="websites">
-              <a href="#">
+              <a href="./assets/images/10.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -914,7 +954,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="websites">
-              <a href="#">
+              <a href="./assets/images/13.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -932,7 +972,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="websites">
-              <a href="#">
+              <a href="./assets/images/15.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -949,26 +989,8 @@
               </a>
             </li>
 
-           <!-- <li class="project-item  active" data-filter-item data-category="websites">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/17.png" alt="GSC" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">GSC</h3>
-
-                <p class="project-category">Websites</p>
-
-              </a>
-            </li>-->
-
             <li class="project-item  active" data-filter-item data-category="websites">
-              <a href="#">
+              <a href="./assets/images/18.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -986,7 +1008,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="e-commerce">
-              <a href="#">
+              <a href="./assets/images/3.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1004,7 +1026,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="e-commerce">
-              <a href="#">
+              <a href="./assets/images/4.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1022,7 +1044,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="e-commerce">
-              <a href="#">
+              <a href="./assets/images/7.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1040,7 +1062,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="e-commerce">
-              <a href="#">
+              <a href="./assets/images/9.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1058,7 +1080,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="e-commerce">
-              <a href="#">
+              <a href="./assets/images/11.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1076,7 +1098,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="e-commerce">
-              <a href="#">
+              <a href="./assets/images/12.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1094,7 +1116,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="e-commerce">
-              <a href="#">
+              <a href="./assets/images/16.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1112,25 +1134,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/5.png" alt="Key" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Mawqif</h3>
-
-                <p class="project-category">Application</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+              <a href="./assets/images/2.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1148,7 +1152,7 @@
             </li>
 
             <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
+              <a href="./assets/images/1.png" data-lightbox="roadtrip">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -1429,6 +1433,24 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="./assets/js/lightbox-plus-jquery.min.js"></script>
+
+<script>
+
+  lightbox.option({
+    'resizeDuration': 200,
+    'wrapAround': true
+  })
+
+  function previewCv() {
+    document.getElementById("cv-view").style.display = 'block';
+    document.getElementById("close-cv").style.display = 'block';
+  }
+  function closeCv() {
+    document.getElementById("cv-view").style.display = 'none';
+    document.getElementById("close-cv").style.display = 'none';
+  }
+</script>
 
 </body>
 
