@@ -168,13 +168,13 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
+            <button class="navbar-link  active" id="about" data-nav-link>About</button>
           </li>
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
+            <button class="navbar-link" id="resume" data-nav-link>Resume</button>
           </li>
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" id="portfolio" data-nav-link>Portfolio</button>
           </li>
 
           <li class="navbar-item">
@@ -1445,10 +1445,16 @@
   function previewCv() {
     document.getElementById("cv-view").style.display = 'block';
     document.getElementById("close-cv").style.display = 'block';
+    document.getElementById("portfolio").style.display = 'none';
+    document.getElementById("resume").style.display = 'none';
+    document.getElementById("about").style.display = 'none';
   }
   function closeCv() {
     document.getElementById("cv-view").style.display = 'none';
     document.getElementById("close-cv").style.display = 'none';
+    document.getElementById("portfolio").style.display = 'block';
+    document.getElementById("resume").style.display = 'block';
+    document.getElementById("about").style.display = 'block';
   }
 </script>
 
