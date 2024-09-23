@@ -185,7 +185,11 @@
 <!--            <a href="cv.html" class="navbar-link" data-nav-link>CV</a>-->
             <a href="javascript:void(0);" onclick="previewCv();" class="navbar-link">CV</a>
             <a href="javascript:void(0);" onclick="closeCv();" id="close-cv" class="navbar-link close-cv" style="float: right; display: none;">Close CV</a>
-            <embed style="display: none;" src="./cv.pdf" id="cv-view" width="1200px" height="5300px" />
+            <object style="display: none;" data="./cv.pdf" id="cv-view" type="application/pdf" width="1200px" height="5300px">
+              <p>Your web browser doesn't have a PDF plugin.
+                Instead, you can <a href="./cv.pdf">click here to
+                  download the PDF file.</a></p>
+            </object>
           </li>
           <!--<li class="navbar-item">
             <button class="navbar-link" data-nav-link>Blog</button>
@@ -1131,7 +1135,7 @@
 
                 <h3 class="project-title">People's Pantry</h3>
 
-                <p class="project-category">Websites</p>
+                <p class="project-category">E-Commerce</p>
 
               </a>
             </li>
@@ -1149,7 +1153,7 @@
 
                 <h3 class="project-title">Panel Built</h3>
 
-                <p class="project-category">Websites</p>
+                <p class="project-category">E-Commerce</p>
 
               </a>
             </li>
